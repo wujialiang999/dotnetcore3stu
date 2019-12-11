@@ -16,10 +16,14 @@ namespace dotnetcore3stu
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //注册服务
+            services.AddSingleton<IWelcomeService,WelcomService>();// 单例模式
+            // AddTransient 每次请求都声称一个实例
+            // AddScoped 一次web请求生成一个实例,多次请求还是一个
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,IWelcomeService welcomeService)
         {
             if (env.IsDevelopment())
             {
@@ -32,7 +36,8 @@ namespace dotnetcore3stu
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("Hello World!");
+                    var welcome = welcomeService.getMessage();
+                    await context.Response.WriteAsync(welcome);
                 });
             });
         }
