@@ -15,6 +15,7 @@ namespace dotnetcore3stu
             //注册服务
             services.AddMvc(options => options.EnableEndpointRouting = false);//.net core 3与2不同
             services.AddSingleton<IWelcomeService, WelcomService>();// 单例模式
+            services.AddScoped<IReposity<Student>,InMertoryRepository>();
             // AddTransient 每次请求都声称一个实例
             // AddScoped 一次web请求生成一个实例,多次请求还是一个
         }

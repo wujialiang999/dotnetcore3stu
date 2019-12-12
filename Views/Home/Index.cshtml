@@ -1,4 +1,4 @@
-@model dotnetcore3stu.Student
+@model IEnumerable<dotnetcore3stu.Student>
 @{
     Layout = null;
 }
@@ -10,9 +10,11 @@
     </head>
     <body>
         <h1>
-        <!--传过来的student模型-->
-            @Model.FirstName
-            @Model.LastName
+            @foreach(var s in Model){
+                <li>
+                    @s.FirstName - @s.LastName
+                </li>
+            }
         </h1>
     </body>
 </html>
