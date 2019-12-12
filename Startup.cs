@@ -29,6 +29,11 @@ namespace dotnetcore3stu
                 app.UseExceptionHandler();
             }
 
+            // 显示index.html的中间件
+            // app.UseDefaultFiles();
+            // app.UseStaticFiles();
+            app.UseFileServer();
+            //UseFileServer包含前两个中间件UseDefaultFiles和UseStaticFiles
             app.UseRouting();
             //判断是否为单元测试环境
             // env.EnvironmentName = "UnionTest";
