@@ -34,3 +34,14 @@
 /home/wjl/vsproject/cs/dotnetcore3stu/obj/Debug/netcoreapp3.1/dotnetcore3stu.RazorTargetAssemblyInfo.cache
 /home/wjl/vsproject/cs/dotnetcore3stu/obj/Debug/netcoreapp3.1/dotnetcore3stu.dll
 /home/wjl/vsproject/cs/dotnetcore3stu/obj/Debug/netcoreapp3.1/dotnetcore3stu.pdb
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/bin/Debug/netcoreapp3.1/dotnetcore3stu.Views.dll
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/bin/Debug/netcoreapp3.1/dotnetcore3stu.Views.pdb
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/dotnetcore3stu.RazorAssemblyInfo.cache
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/dotnetcore3stu.RazorAssemblyInfo.cs
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/dotnetcore3stu.TagHelpers.input.cache
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/dotnetcore3stu.TagHelpers.output.cache
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/dotnetcore3stu.RazorCoreGenerate.cache
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/dotnetcore3stu.RazorTargetAssemblyInfo.cs
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/dotnetcore3stu.Views.pdb
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/dotnetcore3stu.csproj.CopyComplete

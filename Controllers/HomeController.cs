@@ -14,7 +14,13 @@ namespace dotnetcore3stu
                 FirstName = "Nick",
                 LastName = "Tom"
             };
-            return new ObjectResult(st);
+            return View(st);
+            /*
+                /Views/Home/Student.cshtml
+                /Views/Shared/Student.cshtml
+                /Pages/Shared/Student.cshtml
+            */
+            // return new ObjectResult(st);
             // return this.Content("文字内容");
             // return "Hello from HomeController";
         }

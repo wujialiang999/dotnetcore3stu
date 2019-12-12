@@ -20499,6 +20499,12 @@
     "CSharpLanguageVersion": 703
   },
   "RootNamespace": "dotnetcore3stu",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/Views/Home/Index.cshtml",
+      "TargetPath": "Views/Home/Index.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }
