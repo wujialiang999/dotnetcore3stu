@@ -13,6 +13,7 @@ namespace dotnetcore3stu
         public void ConfigureServices(IServiceCollection services)
         {
             //注册服务
+            services.AddMvc(options => options.EnableEndpointRouting = false);//.net core 3与2不同
             services.AddSingleton<IWelcomeService,WelcomService>();// 单例模式
             // AddTransient 每次请求都声称一个实例
             // AddScoped 一次web请求生成一个实例,多次请求还是一个
@@ -31,9 +32,11 @@ namespace dotnetcore3stu
 
             // 显示index.html的中间件
             // app.UseDefaultFiles();
-            // app.UseStaticFiles();
-            app.UseFileServer();
+            app.UseStaticFiles();
+            // app.UseFileServer();
             //UseFileServer包含前两个中间件UseDefaultFiles和UseStaticFiles
+            // 使用默认路由的MVC框架
+            app.UseMvcWithDefaultRoute();
             app.UseRouting();
             //判断是否为单元测试环境
             // env.EnvironmentName = "UnionTest";
