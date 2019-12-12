@@ -40,7 +40,7 @@ namespace dotnetcore3stu
             //自定义路由
             app.UseMvc(builder=>{
                 // /Home/Index/3
-                builder.MapRoute("Default","{controller}/{action}/{id?}");// ?表示可选
+                // builder.MapRoute("Default","{controller}/{action}/{id?}");// ?表示可选 按照约定配置路由
             });
             app.UseRouting();
             //判断是否为单元测试环境
