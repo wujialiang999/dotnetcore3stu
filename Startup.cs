@@ -36,7 +36,12 @@ namespace dotnetcore3stu
             // app.UseFileServer();
             //UseFileServer包含前两个中间件UseDefaultFiles和UseStaticFiles
             // 使用默认路由的MVC框架
-            app.UseMvcWithDefaultRoute();
+            // app.UseMvcWithDefaultRoute(); //源代码 "{controller=Home}/{action=Index}/{id?}"
+            //自定义路由
+            app.UseMvc(builder=>{
+                // /Home/Index/3
+                builder.MapRoute("Default","{controller}/{action}/{id?}");// ?表示可选
+            });
             app.UseRouting();
             //判断是否为单元测试环境
             // env.EnvironmentName = "UnionTest";
