@@ -14,18 +14,20 @@ namespace dotnetcore3stu
         {
             //注册服务
             services.AddMvc(options => options.EnableEndpointRouting = false);//.net core 3与2不同
-            services.AddSingleton<IWelcomeService,WelcomService>();// 单例模式
+            services.AddSingleton<IWelcomeService, WelcomService>();// 单例模式
             // AddTransient 每次请求都声称一个实例
             // AddScoped 一次web请求生成一个实例,多次请求还是一个
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,IWelcomeService welcomeService)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IWelcomeService welcomeService)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            }else{
+            }
+            else
+            {
                 //非开发环境下使用
                 app.UseExceptionHandler();
             }
@@ -38,9 +40,10 @@ namespace dotnetcore3stu
             // 使用默认路由的MVC框架
             // app.UseMvcWithDefaultRoute(); //源代码 "{controller=Home}/{action=Index}/{id?}"
             //自定义路由
-            app.UseMvc(builder=>{
+            app.UseMvc(builder =>
+            {
                 // /Home/Index/3
-                builder.MapRoute("Default","{controller}/{action}/{id?}");// ?表示可选 按照约定配置路由
+                builder.MapRoute("Default", "{controller}/{action}/{id?}");// ?表示可选 按照约定配置路由
             });
             app.UseRouting();
             //判断是否为单元测试环境
