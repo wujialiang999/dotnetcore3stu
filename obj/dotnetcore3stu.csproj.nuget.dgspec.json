@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/wjl/vsproject/cs/dotnetcore3stu/dotnetcore3stu.csproj": {}
+    "/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/dotnetcore3stu.csproj": {}
   },
   "projects": {
-    "/home/wjl/vsproject/cs/dotnetcore3stu/dotnetcore3stu.csproj": {
+    "/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/dotnetcore3stu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/wjl/vsproject/cs/dotnetcore3stu/dotnetcore3stu.csproj",
+        "projectUniqueName": "/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/dotnetcore3stu.csproj",
         "projectName": "dotnetcore3stu",
-        "projectPath": "/home/wjl/vsproject/cs/dotnetcore3stu/dotnetcore3stu.csproj",
+        "projectPath": "/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/dotnetcore3stu.csproj",
         "packagesPath": "/home/wjl/.nuget/packages/",
-        "outputPath": "/home/wjl/vsproject/cs/dotnetcore3stu/obj/",
+        "outputPath": "/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/wjl/.nuget/NuGet/NuGet.Config"
