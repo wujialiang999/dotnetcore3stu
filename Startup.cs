@@ -24,15 +24,19 @@ namespace dotnetcore3stu
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }else{
+                //非开发环境下使用
+                app.UseExceptionHandler();
             }
 
             app.UseRouting();
-
+            //判断是否为单元测试环境
+            // env.EnvironmentName = "UnionTest";
+            // env.IsEnvironment("UnionTest");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    throw new System.Exception("出错了");
                     var welcome = welcomeService.getMessage();
                     await context.Response.WriteAsync(welcome);
                 });
