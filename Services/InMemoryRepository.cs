@@ -1,12 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace dotnetcore3stu
 {
     public class InMertoryRepository : IReposity<Student>
     {
-        public IEnumerable<Student> GetAll()
-        {
-            return new List<Student>{
+        private List<Student> _students = new List<Student>{
                new Student
             {
                 Id = 1,
@@ -29,6 +28,14 @@ namespace dotnetcore3stu
                 BirthDate = new System.DateTime(1994,1,4)
             }
             };
+        public IEnumerable<Student> GetAll()
+        {
+            return _students;
+        }
+
+        public Student GetById(int id)
+        {
+            return _students.FirstOrDefault(x => x.Id == id);
         }
     }
 }

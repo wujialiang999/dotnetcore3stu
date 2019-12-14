@@ -12,7 +12,8 @@
         <h1>
             @foreach(var s in Model.Students){
                 <li>
-                    @s.Name (@s.Age)
+                    @s.Name (@s.Age) 
+                    <a href = "/home/detail/@s.Id">detail</a>
                 </li>
             }
         </h1>

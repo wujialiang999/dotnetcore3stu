@@ -24,6 +24,7 @@ namespace dotnetcore3stu
             IEnumerable<Student> list = _reposity.GetAll();
             var vms = list.Select(x => new StudentViewModel
             {
+                Id = x.Id,
                 Name = $"{x.FirstName} {x.LastName}",
                 Age = System.DateTime.Now.Subtract(x.BirthDate).Days / 365
             });
@@ -40,6 +41,17 @@ namespace dotnetcore3stu
             // return new ObjectResult(st);
             // return this.Content("文字内容");
             // return "Hello from HomeController";
+        }
+
+        public IActionResult Detail(int id)
+        {// 首先路由参数查找
+            // return Content(id.ToString());
+            var student = _reposity.GetById(id);
+            if (student == null)
+                // return View("Not Found");跳转到not found页面
+                // return RedirectToAction("Index");// 跳转到本Controller
+                return RedirectToAction("Index", "Home");//第二个参数为ControllerName，可以跳转到指定Controller
+            return View(student);
         }
     }
 }
