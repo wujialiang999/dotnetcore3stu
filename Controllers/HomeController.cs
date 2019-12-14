@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 namespace dotnetcore3stu
 {
@@ -21,7 +22,11 @@ namespace dotnetcore3stu
             //     LastName = "Tom"
             // };
             IEnumerable<Student> list =_reposity.GetAll();
-            return View(list);
+            var vms = list.Select(x=>new HomeIndexViewModel{
+                Name = $"{x.FirstName} {x.LastName}",
+                Age = System.DateTime.Now.Subtract(x.BirthDate).Days/365
+            });
+            return View(vms);
             /*
                 /Views/Home/Student.cshtml
                 /Views/Shared/Student.cshtml

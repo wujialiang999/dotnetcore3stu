@@ -11,19 +11,22 @@ namespace dotnetcore3stu
             {
                 Id = 1,
                 FirstName = "Nick1",
-                LastName = "Tom"
+                LastName = "Tom",
+                BirthDate = new System.DateTime(1974,1,4)
             },
             new Student
             {
                 Id = 2,
                 FirstName = "Nick2",
-                LastName = "Tom"
+                LastName = "Tom",
+                BirthDate = new System.DateTime(1984,1,4)
             },
             new Student
             {
                 Id = 3,
                 FirstName = "Nick3",
-                LastName = "Tom"
+                LastName = "Tom",
+                BirthDate = new System.DateTime(1994,1,4)
             }
             };
         }
