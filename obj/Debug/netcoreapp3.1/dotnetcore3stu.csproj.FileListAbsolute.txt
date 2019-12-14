@@ -46,3 +46,4 @@
 /home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/dotnetcore3stu.Views.pdb
 /home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/dotnetcore3stu.csproj.CopyComplete
 /home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/Razor/Views/Home/Detail.cshtml.g.cs
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs

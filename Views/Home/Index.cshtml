@@ -13,7 +13,8 @@
             @foreach(var s in Model.Students){
                 <li>
                     @s.Name (@s.Age) 
-                    @Html.ActionLink("明细","detail",new {id = s.Id})
+                    <a asp-action="Detail",
+                    asp-route-id="@s.Id">明细 Tag</a>
                 </li>
             }
         </h1>
