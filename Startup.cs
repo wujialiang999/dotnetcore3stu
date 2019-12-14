@@ -3,19 +3,32 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace dotnetcore3stu
 {
     public class Startup
     {
+        private readonly IConfiguration _configuration;
+        public Startup(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             //注册服务
+            var connectionString = _configuration["ConnectionStrings:SQLiteDb"];
+            // var connectionString = _configuration.GetConnectionString("SQLiteDb");
             services.AddMvc(options => options.EnableEndpointRouting = false);//.net core 3与2不同
+            services.AddDbContext<DataContext>(options =>
+            {
+                options.UseSqlite(connectionString);
+            });
             services.AddSingleton<IWelcomeService, WelcomService>();// 单例模式
-            services.AddSingleton<IReposity<Student>,InMertoryRepository>();
+            services.AddSingleton<IReposity<Student>, InMertoryRepository>();
             // AddTransient 每次请求都声称一个实例
             // AddScoped 一次web请求生成一个实例,多次请求还是一个
         }
