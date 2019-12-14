@@ -28,7 +28,7 @@ namespace dotnetcore3stu
                 options.UseSqlite(connectionString);
             });
             services.AddSingleton<IWelcomeService, WelcomService>();// 单例模式
-            services.AddSingleton<IReposity<Student>, InMertoryRepository>();
+            services.AddScoped<IReposity<Student>, EFCoreServiceRepository>();//保证在一个线程里面
             // AddTransient 每次请求都声称一个实例
             // AddScoped 一次web请求生成一个实例,多次请求还是一个
         }
