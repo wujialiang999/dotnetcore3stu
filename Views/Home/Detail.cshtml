@@ -9,9 +9,17 @@
         <title>Hello From Index.cshtml</title>
     </head>
     <body>
-        <h1>
+        <h1>学生信息</h1>
+        <h2>@Model.Id</h2>
+        <p>
            @Model.FirstName @Model.LastName 
-        </h1>
+        </p>
+        <p>
+           @Model.Gender
+        </p>
+         <p>
+           @Model.BirthDate.ToString("yyyy-MM-dd")
+        </p>
         <a asp-action="Index">返回到Home</a>
     </body>
 </html>

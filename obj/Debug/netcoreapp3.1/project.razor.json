@@ -20501,6 +20501,11 @@
   "RootNamespace": "dotnetcore3stu",
   "Documents": [
     {
+      "FilePath": "/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/Views/Home/Create.cshtml",
+      "TargetPath": "Views/Home/Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/Views/Home/Detail.cshtml",
       "TargetPath": "Views/Home/Detail.cshtml",
       "FileKind": "mvc"

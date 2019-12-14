@@ -50,8 +50,31 @@ namespace dotnetcore3stu
             if (student == null)
                 // return View("Not Found");跳转到not found页面
                 // return RedirectToAction("Index");// 跳转到本Controller
-                return RedirectToAction("Index", "Home");//第二个参数为ControllerName，可以跳转到指定Controller
+                // return RedirectToAction("Index", "Home");//第二个参数为ControllerName，可以跳转到指定Controller
+                return RedirectToAction(nameof(Index));
             return View(student);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(StudentCreateViewModel student)
+        {
+            var newStudent = new Student
+            {
+                FirstName = student.FirstName,
+                LastName = student.LastName,
+                BirthDate = student.BirthDate,
+                Gender = student.Gender
+            };
+           var newModel = _reposity.Add(newStudent);
+
+            // return View("Detail",newModel);// 这样会造成重复提交表单
+            return RedirectToAction(nameof(Detail),new {id = newModel.Id});
         }
     }
 }

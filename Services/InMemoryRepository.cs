@@ -28,6 +28,15 @@ namespace dotnetcore3stu
                 BirthDate = new System.DateTime(1994,1,4)
             }
             };
+
+        public Student Add(Student newModel)
+        {
+            var maxId=_students.Max(x=>x.Id);
+            newModel.Id = maxId+1;
+            _students.Add(newModel);
+            return newModel;
+        }
+
         public IEnumerable<Student> GetAll()
         {
             return _students;
@@ -37,5 +46,6 @@ namespace dotnetcore3stu
         {
             return _students.FirstOrDefault(x => x.Id == id);
         }
+        
     }
 }

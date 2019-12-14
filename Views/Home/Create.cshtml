@@ -1,0 +1,26 @@
+@using dotnetcore3stu
+@model Student
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content = "width=device-width"/>
+        <title>Create</title>
+    </head>
+    <body>
+        <h1>创建学生</h1>
+        <form method = "post">
+            <input asp-for="FirstName"/>
+            <input asp-for="LastName"/>
+            <input asp-for="BirthDate" type="date"/>
+            <select asp-for="Gender" asp-items="@Html.GetEnumSelectList<Gender>()">
+                
+            </select>
+            <button type="submit" name ="save">
+                保存
+            </button>
+        </form>
+    </body>
+</html>
