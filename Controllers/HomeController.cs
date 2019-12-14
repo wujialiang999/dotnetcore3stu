@@ -21,12 +21,17 @@ namespace dotnetcore3stu
             //     FirstName = "Nick",
             //     LastName = "Tom"
             // };
-            IEnumerable<Student> list =_reposity.GetAll();
-            var vms = list.Select(x=>new HomeIndexViewModel{
+            IEnumerable<Student> list = _reposity.GetAll();
+            var vms = list.Select(x => new StudentViewModel
+            {
                 Name = $"{x.FirstName} {x.LastName}",
-                Age = System.DateTime.Now.Subtract(x.BirthDate).Days/365
+                Age = System.DateTime.Now.Subtract(x.BirthDate).Days / 365
             });
-            return View(vms);
+            var vm = new HomeIndexViewModel
+            {
+                Students = vms
+            };
+            return View(vm);
             /*
                 /Views/Home/Student.cshtml
                 /Views/Shared/Student.cshtml
