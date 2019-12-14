@@ -1,5 +1,5 @@
 @using dotnetcore3stu
-@model Student
+@model StudentCreateViewModel
 @{
     Layout = null;
 }
@@ -12,12 +12,32 @@
     <body>
         <h1>创建学生</h1>
         <form method = "post">
-            <input asp-for="FirstName"/>
-            <input asp-for="LastName"/>
-            <input asp-for="BirthDate" type="date"/>
-            <select asp-for="Gender" asp-items="@Html.GetEnumSelectList<Gender>()">
-                
-            </select>
+            <div>
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName"/>
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div>
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName"/>
+                <span asp-validation-for="LastName"></span>
+            </div>
+            <div>
+                <label asp-for="BirthDate"></label>
+                <input asp-for="BirthDate" type="date"/>
+                <span asp-validation-for="BirthDate"></span>
+            </div>
+            <div>
+                <label asp-for="Gender"></label>
+                <select asp-for="Gender" asp-items="@Html.GetEnumSelectList<Gender>()">
+                    
+                </select>
+            </div>
+            <div asp-validation-summary="All">
+                <!--验证错误信息的汇总-->
+                <!--ModelOnly-->
+                <!--All-->
+            </div>
             <button type="submit" name ="save">
                 保存
             </button>

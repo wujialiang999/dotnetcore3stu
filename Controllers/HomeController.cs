@@ -62,19 +62,25 @@ namespace dotnetcore3stu
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]// 防止csrf攻击
         public IActionResult Create(StudentCreateViewModel student)
         {
-            var newStudent = new Student
+            if (ModelState.IsValid)
             {
-                FirstName = student.FirstName,
-                LastName = student.LastName,
-                BirthDate = student.BirthDate,
-                Gender = student.Gender
-            };
-           var newModel = _reposity.Add(newStudent);
+                var newStudent = new Student
+                {
+                    FirstName = student.FirstName,
+                    LastName = student.LastName,
+                    BirthDate = student.BirthDate,
+                    Gender = student.Gender
+                };
+                var newModel = _reposity.Add(newStudent);
 
-            // return View("Detail",newModel);// 这样会造成重复提交表单
-            return RedirectToAction(nameof(Detail),new {id = newModel.Id});
+                // return View("Detail",newModel);// 这样会造成重复提交表单
+                return RedirectToAction(nameof(Detail), new { id = newModel.Id });
+            }
+            // ModelState.AddModelError(string.Empty,"Model Level Error");
+            return View();//返回CreateView
         }
     }
 }
