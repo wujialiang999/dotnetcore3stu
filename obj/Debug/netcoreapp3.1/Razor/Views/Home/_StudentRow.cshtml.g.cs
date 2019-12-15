@@ -20,7 +20,7 @@ using dotnetcore3stu;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fc446666754c4a12d9cb2abfb474a611e4b7dcc5", @"/Views/Home/_StudentRow.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7f2a8225bd19cf25745a89526c4232198eee7262", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bd77332b067515bef9a26ee46dfe431f4e2789eb", @"/Views/_ViewImports.cshtml")]
     public class Views_Home__StudentRow : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<StudentViewModel>
     {
         #pragma warning disable 1998

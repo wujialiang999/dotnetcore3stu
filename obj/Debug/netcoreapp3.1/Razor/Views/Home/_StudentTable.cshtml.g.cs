@@ -20,7 +20,7 @@ using dotnetcore3stu;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"293a740cdc10b22dbb2895152e9fdb96d513a82d", @"/Views/Home/_StudentTable.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7f2a8225bd19cf25745a89526c4232198eee7262", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bd77332b067515bef9a26ee46dfe431f4e2789eb", @"/Views/_ViewImports.cshtml")]
     public class Views_Home__StudentTable : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<StudentViewModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("name", "_StudentRow", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

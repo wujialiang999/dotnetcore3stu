@@ -22,4 +22,14 @@
         <a asp-action="Create">添加一个学生</a>
     </div>
 }
-
+@*
+@await Component.InvokeAsync("Welcome")
+*@
+<vc:welcome></vc:welcome>
+@*
+    例如有WelcomeStudentsViewComponent.cs，
+    这是需要改为<vc:welcome-students></vc:welcome-students>
+*@
+@*
+    需要注册@addTagHelper *,dotnetcore3stu
+*@
