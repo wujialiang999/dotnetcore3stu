@@ -80,3 +80,5 @@
 /home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/e_sqlite3.dll
 /home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/Razor/Views/Share/_Layout.cshtml.g.cs
 /home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/Razor/Views/Home/_StudentRow.cshtml.g.cs
+/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/obj/Debug/netcoreapp3.1/Razor/Views/Home/_StudentTable.cshtml.g.cs

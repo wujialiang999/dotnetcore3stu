@@ -20511,6 +20511,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/Views/Home/_StudentTable.cshtml",
+      "TargetPath": "Views/Home/_StudentTable.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/Views/_ViewStart.cshtml",
       "TargetPath": "Views/_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -20523,6 +20528,11 @@
     {
       "FilePath": "/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/Views/Home/Index.cshtml",
       "TargetPath": "Views/Home/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/wjl/vsproject/cs/dotnetproject/dotnetcore3stu/Views/Home/_StudentRow.cshtml",
+      "TargetPath": "Views/Home/_StudentRow.cshtml",
       "FileKind": "mvc"
     },
     {

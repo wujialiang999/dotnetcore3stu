@@ -2,7 +2,11 @@
 @{
     ViewBag.Title = "Home Index";
 }
-
+@*
+    @Html.Partial("_StudentTable",Model.Students)
+*@
+<partial name="_StudentTable" for="@Model.Students"/>
+@*
 <h1>
     @foreach(var s in Model.Students){
         <li>
@@ -12,6 +16,7 @@
         </li>
     }
 </h1>
+*@
 @section bottom{
     <div>
         <a asp-action="Create">添加一个学生</a>
